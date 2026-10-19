@@ -4,8 +4,11 @@ A tool-assisted speedrun of Cave Story's Best Ending (Japanese freeware `Doukuts
 **149,933 frames = 49:58.660**. That's **582 frames (11.64 s) faster** than nitsuja's TASVideos publication
 [1917M](https://tasvideos.org/1917M) (50:10.300). As far as we know, it's the first Best Ending TAS under 50 minutes.
 
-The write-up, with interactive charts, ghost races and toys: **[zoan.space/cave-story](https://zoan.space/cave-story/)**.
+The write-up, with interactive charts, ghost races and videos: **[zoan.space/cave-story](https://zoan.space/cave-story/)** (coming soon).
 The long version is in [WRITEUP.md](WRITEUP.md).
+
+**Snapshot:** this is record-522. The search is still running and newer records exist (record-538, 49:58.340, 598
+frames under 1917M, as of October 19, 2026). This repo is updated at milestones.
 
 **Status: unofficial.** Every record was checked frame for frame against the original exe running under Wine. It
 hasn't been played back in Hourglass itself, and it hasn't been submitted to TASVideos.
