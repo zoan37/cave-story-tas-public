@@ -11,14 +11,16 @@ The long version is in [WRITEUP.md](WRITEUP.md). The full run with chapters and 
 **Paused, not finished:** this is record-597, the 129th record, from October 21, 2026. The search was paused while
 records were still arriving about once an hour; see [Carry the torch](#carry-the-torch).
 
-**Status: unofficial.** Every record was checked frame for frame against the original exe running under Wine. It
-hasn't been played back in Hourglass itself, and it hasn't been submitted to TASVideos.
+**Status: unofficial.** Every record was checked frame for frame against the original exe running under Wine, and
+record-597 also plays back in sync to the ending in real **Hourglass r77**, the tool 1917M was made with: 149,858
+frames, no desync warnings. It hasn't been submitted to TASVideos.
 
 ## What's here
 
 | path | what |
 |---|---|
 | [`movies/record-597frames.txt`](movies/) | the run, one input per logic frame (format below) |
+| [`movies/record-597frames.wtf`](movies/) | the same run as an Hourglass r77 movie (see [Watching it in Hourglass](#watching-it-in-hourglass)) |
 | [`WRITEUP.md`](WRITEUP.md) | how it was found: the bit-exact twin, GPU ports, luck engineering, bosses, failed ideas, how close to optimal |
 | [`data/records.csv`](data/records.csv) | all 129 records the project banked, in order, with their commit messages |
 | [`data/rooms.csv`](data/rooms.csv) | all 148 room visits, nitsuja vs this run, in frames |
@@ -45,6 +47,16 @@ read. Hourglass `.wtf` files store those lag frames as entries, and
 
     Hourglass entries = logic frames − 5 (Hourglass clock offset at the title) + 1,210 lag frames
     149,858           = 148,653      − 5                                         + 1,210
+
+## Watching it in Hourglass
+
+1. Get [Hourglass r77](https://github.com/TASEmulators/hourglass-win32/releases/tag/r77) and the Japanese freeware
+   `Doukutsu.exe` 1.0.0.6 (the version 1917M uses), with no translation patch and no `Profile.dat` in its folder.
+2. Set the game to 640x480 windowed (its config tool), as nitsuja's instructions say.
+3. In Hourglass, open the exe and `movies/record-597frames.wtf`, then Run and Play.
+
+On Windows 11 the game froze in the Intel graphics driver under Hourglass until we set **Graphics → Surface Memory →
+System Memory**. That setting doesn't affect sync: nitsuja's own 1917M plays to the ending the same way.
 
 ## Carry the torch
 

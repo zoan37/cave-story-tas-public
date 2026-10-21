@@ -214,7 +214,7 @@ def desync_values(entries, info, tmpl_h, tmpl_entries):
     out = []
     for k in range(16):
         h = 1 << k
-        if h < first_diff:
+        if h < first_diff or h <= 32:          # frame 32: real Hourglass r77 gives his 6740 (2026-10-21 playback)
             out.append(tmpl_h["desync"][k])
             continue
         v = tmpl_h["initial_time"] + 20 * h + 99
