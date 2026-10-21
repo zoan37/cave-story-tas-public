@@ -5,7 +5,8 @@ A tool-assisted speedrun of Cave Story's Best Ending (Japanese freeware `Doukuts
 [1917M](https://tasvideos.org/1917M) (50:10.300). As far as we know, it's the first Best Ending TAS under 50 minutes.
 
 The write-up, with interactive charts, ghost races and videos: **[zoan.space/cave-story-tas](https://zoan.space/cave-story-tas/)**
-The long version is in [WRITEUP.md](WRITEUP.md).
+The long version is in [WRITEUP.md](WRITEUP.md). The full run with chapters and commentary captions is on
+[YouTube](https://www.youtube.com/watch?v=6Us2w5dTEy8).
 
 **Paused, not finished:** this is record-597, the 129th record, from October 21, 2026. The search was paused while
 records were still arriving about once an hour; see [Carry the torch](#carry-the-torch).
