@@ -11,5 +11,5 @@
 
 Example, counting frames:
 
-    python3 -c "import sys; sys.path.insert(0, 'tools'); import cstas; print(len(cstas.load_movie('movies/record-522frames.txt')))"
-    # 148728
+    python3 -c "import sys; sys.path.insert(0, 'tools'); import cstas; print(len(cstas.load_movie('movies/record-597frames.txt')))"
+    # 148653

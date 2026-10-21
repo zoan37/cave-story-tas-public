@@ -1,14 +1,14 @@
-# Cave Story Best Ending TAS in 49:58.66
+# Cave Story Best Ending TAS in 49:57.16
 
 A tool-assisted speedrun of Cave Story's Best Ending (Japanese freeware `Doukutsu.exe` 1.0.0.6) that finishes in
-**149,933 frames = 49:58.660**. That's **582 frames (11.64 s) faster** than nitsuja's TASVideos publication
+**149,858 frames = 49:57.160**. That's **657 frames (13.14 s) faster** than nitsuja's TASVideos publication
 [1917M](https://tasvideos.org/1917M) (50:10.300). As far as we know, it's the first Best Ending TAS under 50 minutes.
 
-The write-up, with interactive charts, ghost races and videos: **[zoan.space/cave-story-tas](https://zoan.space/cave-story-tas/)** (coming soon).
+The write-up, with interactive charts, ghost races and videos: **[zoan.space/cave-story-tas](https://zoan.space/cave-story-tas/)**
 The long version is in [WRITEUP.md](WRITEUP.md).
 
-**Snapshot:** this is record-522. The search is still running and newer records exist (record-538, 49:58.340, 598
-frames under 1917M, as of October 19, 2026). This repo is updated at milestones.
+**Paused, not finished:** this is record-597, the 129th record, from October 21, 2026. The search was paused while
+records were still arriving about once an hour; see [Carry the torch](#carry-the-torch).
 
 **Status: unofficial.** Every record was checked frame for frame against the original exe running under Wine. It
 hasn't been played back in Hourglass itself, and it hasn't been submitted to TASVideos.
@@ -17,9 +17,9 @@ hasn't been played back in Hourglass itself, and it hasn't been submitted to TAS
 
 | path | what |
 |---|---|
-| [`movies/record-522frames.txt`](movies/) | the run, one input per logic frame (format below) |
+| [`movies/record-597frames.txt`](movies/) | the run, one input per logic frame (format below) |
 | [`WRITEUP.md`](WRITEUP.md) | how it was found: the bit-exact twin, GPU ports, luck engineering, bosses, failed ideas, how close to optimal |
-| [`data/records.csv`](data/records.csv) | all 81 records the project banked, in order, with their commit messages |
+| [`data/records.csv`](data/records.csv) | all 129 records the project banked, in order, with their commit messages |
 | [`data/rooms.csv`](data/rooms.csv) | all 148 room visits, nitsuja vs this run, in frames |
 | [`tools/`](tools/) | the movie-format library and the Hourglass `.wtf` converter |
 
@@ -43,7 +43,23 @@ read. Hourglass `.wtf` files store those lag frames as entries, and
 `tools/hourglass.py` converts between the two formats:
 
     Hourglass entries = logic frames − 5 (Hourglass clock offset at the title) + 1,210 lag frames
-    149,933           = 148,728      − 5                                         + 1,210
+    149,858           = 148,653      − 5                                         + 1,210
+
+## Carry the torch
+
+This route isn't proven optimal. Our estimate is that 20 to 110 more frames exist (a floor around 49:55 to 49:57),
+spread thin, plus whatever a new idea finds. What we'd try next:
+
+- **Re-solve the room after a near miss.** A faster exit that lands on the wrong RNG seed can often be saved by
+  re-solving the next room for that seed. Our sweep of such exits covered about two-thirds of the run.
+- **Lenient doors.** Many doors accept more than one RNG offset and still replay the rest of the game. The Sand Zone
+  doors' sets kept growing as that area improved, and the newest members were never searched.
+- **The 60% that's still nitsuja.** Long stretches are his inputs byte for byte, and whole-room searches over rooms
+  like that kept finding a frame or two until the end.
+- **Ideas we couldn't make work** are listed in [WRITEUP.md](WRITEUP.md#what-didnt-work), with the reason each failed.
+  A new mechanism would change the picture.
+
+If you beat it, we'd love to hear about it.
 
 ## Credits
 
